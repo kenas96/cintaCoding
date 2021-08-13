@@ -8,8 +8,8 @@
   </ul>
 </nav>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
-  <a href="index3.html" class="brand-link">
-    <span class="brand-text font-weight-light">Halodoc Test</span>
+  <a href="#" class="brand-link">
+    <span class="brand-text font-weight-light">Cinta Coding</span>
   </a>
   <div class="sidebar">
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
@@ -21,33 +21,63 @@
         />
       </div>
       <div class="info">
-        <a href="#" class="d-block">Kenas Dermawan</a>
+        <a href="javascript:" (click)="getProfile()" data-toggle="modal"
+        data-target="#modal-profile" class="d-block">{{name}}</a>
       </div>
     </div>
-
-    <nav class="mt-2">
-      <ul
-        class="nav nav-pills nav-sidebar flex-column"
-        data-widget="treeview"
-        role="menu"
-        data-accordion="false"
-      >
-        <li class="nav-item" routerLinkActive="active">
-          <a routerLink="issue" class="nav-link">
-            <i class="nav-icon fas fa-user"></i>
-            <p>Test Gitlab</p>
-          </a>
-        </li>
-        <!-- <li class="nav-item">
-          <a href="pages/widgets.html" class="nav-link">
-            <i class="nav-icon fas fa-th"></i>
-            <p>
-              Widgets
-              <span class="right badge badge-danger">New</span>
-            </p>
-          </a>
-        </li> -->
-      </ul>
-    </nav>
   </div>
 </aside>
+
+<div class="modal fade" id="modal-profile">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Detail Profile</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-horizontal" novalidate>
+          <div class="form-group row">
+            <span class="col-sm-2 col-form-label">Username</span>
+            <h1 class="col-sm-10 col-form-label">{{ data.username }}</h1>
+          </div>
+          <div class="form-group row">
+            <span class="col-sm-2 col-form-label">Email</span>
+            <h1 class="col-sm-10 col-form-label">{{ data.email }}</h1>
+          </div>
+          <div class="form-group row">
+            <span class="col-sm-2 col-form-label">Address</span>
+            <h1 class="col-sm-10 col-form-label">{{ data.address.street + ', ' + data.address.suite + '. ' + 
+              data.address.city + ' ' + data.address.zipcode}}</h1>
+          </div>
+          <div class="form-group row">
+            <span class="col-sm-2 col-form-label">Phone</span>
+            <h1 class="col-sm-10 col-form-label">{{ data.phone }}</h1>
+          </div>
+          <!-- <div class="form-group row">
+            <div class="col-sm-3">
+              <a href="javascript:" (click)="showComment()" style="margin-right:5px">
+                <i class="fa fa-comment"> </i> {{dataDetail.comments.length}} comment(s)
+              </a>
+            </div>
+          </div> -->
+
+       
+        </div>
+      </div>
+      <div class="modal-footer justify-content-between">
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

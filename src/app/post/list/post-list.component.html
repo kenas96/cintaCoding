@@ -1,0 +1,95 @@
+<div class="content-wrapper">
+  <!-- <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h5>Welcome, {{ name }}</h5>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <section class="content">
+    <div class="col-12 col-sm-12">
+      <div class="card card-primary card-outline card-outline-tabs">
+        <div class="card-header p-0 border-bottom-0">
+          <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="custom-tabs-four-issues-tab"
+                data-toggle="pill"
+                href="#custom-tabs-four-issues"
+                role="tab"
+                aria-controls="custom-tabs-four-issues"
+                aria-selected="true"
+                >Post</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <div class="tab-content" id="custom-tabs-four-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="custom-tabs-four-issues"
+              role="tabpanel"
+              aria-labelledby="custom-tabs-four-issues-tab"
+            >
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="input-group input-group-md">
+                          <input type="text" name="value"  class="no-radius form-control"
+                              placeholder="Search">
+                          <div class="input-group-btn">
+                          <button type="button" class="btn btn-default dropdown-toggle-right white "
+                            style="width: 50px">
+                              <span class="fa fa-search" style="color:#777"></span>
+                          </button>
+                          </div>
+                      </div>
+                          <div class="card-body">
+                            <table id="example2" class="table table-bordered table-hover">
+                            <tbody>
+                              <tr *ngFor="let item of pageOfItems">
+                                <td>{{item.user}}</td>
+                                <td>
+                                  <div class="row">
+                                  {{item.title}}
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-2">
+                                      <i class="fa fa-comment"> </i> {{item.comments ? item.comments.length : '0'}}
+                                    </div>
+                                    <div class="col-3">
+                                      <a href="javascript:" (click)="view(item)"  data-toggle="modal"
+                                      data-target="#modal-default" style="margin-right:5px">
+                                        Detail
+                                    </a>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                            </table>
+                          </div>
+                          <div class="card-footer pb-0 pt-3">
+                              <jw-pagination [items]="data" (changePage)="onChangePage($event)"></jw-pagination>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <post-detail [displayData]="displayCallback" [dataDetail]="dataDetail">
+    </post-detail>
+  </section>
+</div>

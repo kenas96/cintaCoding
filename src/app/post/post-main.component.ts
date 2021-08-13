@@ -1,10 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: "main-issue",
+  selector: "main-post",
   template: "<router-outlet></router-outlet>",
 })
-export class IssueMainComponent implements OnInit {
+export class PostMainComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}

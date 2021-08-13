@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class HalodocTestPage {
+export class CintaCodingPage {
   navigateTo() {
     return browser.get('/');
   }

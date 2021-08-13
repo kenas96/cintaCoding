@@ -1,10 +1,10 @@
-import { HalodocTestPage } from './app.po';
+import { CintaCodingPage } from './app.po';
 
-describe('halodoc-test App', () => {
-  let page: HalodocTestPage;
+describe('cinta-coding App', () => {
+  let page: CintaCodingPage;
 
   beforeEach(() => {
-    page = new HalodocTestPage();
+    page = new CintaCodingPage();
   });
 
   it('should display message saying app works', () => {

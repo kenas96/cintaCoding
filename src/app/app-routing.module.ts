@@ -1,8 +1,16 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { AppComponent } from "./app.component";
+import { LoginComponent } from './auth/login/login.component';
 
 const routes: Routes = [
+  {
+      path: '',
+      component: LoginComponent
+  },
+  {
+      path: 'login',
+      component: LoginComponent
+  },
   {
     path: "pages",
     loadChildren: "app/pages/page.module#PageModule",

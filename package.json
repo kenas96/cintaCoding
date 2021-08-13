@@ -1,5 +1,5 @@
 {
-  "name": "halodoc-test",
+  "name": "cinta-coding",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -28,6 +28,8 @@
     "font-awesome": "^4.7.0",
     "ionicons": "^5.5.1",
     "jquery": "^3.6.0",
+    "jw-angular-pagination": "^1.2.0",
+    "jw-paginate": "^1.0.4",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },

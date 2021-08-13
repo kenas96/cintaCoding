@@ -6,6 +6,7 @@ import { HttpModule } from "@angular/http";
 import { CommonModule } from "@angular/common";
 import { PageMainComponent } from "./page-main.component";
 import { HttpService } from "../http.service";
+import { LoginService } from "../auth/login/login.service";
 import { NavComponent } from "./navbar/nav.component";
 import { ControlModule } from "../control/control.module";
 
@@ -19,6 +20,6 @@ import { ControlModule } from "../control/control.module";
     ControlModule,
   ],
   declarations: [PageMainComponent, NavComponent],
-  providers: [HttpService],
+  providers: [HttpService, LoginService],
 })
 export class PageModule {}

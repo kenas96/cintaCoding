@@ -1,20 +1,20 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { IssueMainComponent } from "./issue-main.component";
-import { IssueListComponent } from "./list/issue-list.component";
+import { PostMainComponent } from "./post-main.component";
+import { PostListComponent } from "./list/post-list.component";
 
 const routes: Routes = [
   {
     path: "",
-    component: IssueMainComponent,
+    component: PostMainComponent,
     children: [
       {
         path: "",
-        component: IssueListComponent,
+        component: PostListComponent,
       },
       {
         path: "**",
-        component: IssueListComponent,
+        component: PostListComponent,
       },
     ],
   },
@@ -26,4 +26,4 @@ const routes: Routes = [
   declarations: [],
   providers: [],
 })
-export class IssueRoutingModule {}
+export class PostRoutingModule {}

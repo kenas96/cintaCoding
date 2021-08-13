@@ -1,0 +1,45 @@
+<div class="canvas login-background">
+  <img class="login-bg" src="assets/img/work-bg.jpg">
+</div>
+<body class="hold-transition login-page">
+  <div class="login-box" style="position: relative;">
+    <div class="login-box-body">
+      <p class="login-box-msg">Login Page</p>
+      <form (ngSubmit)="login()" novalidate [formGroup]="loginForm">
+        <div class="form-horizontal">
+          <div class="form-group has-feedback">
+            <div class="col-md-12" [ngClass]="{ 'has-error': usernameMessage, 'has-success': !usernameMessage && loginForm.get('username').dirty }">
+              <input type="text" id="username" class="form-control" formControlName="username" placeholder="Username"
+                (keyup.enter)="login()">
+              <span class="help-block" *ngIf="usernameMessage">
+                <small>
+                  {{usernameMessage}}
+                </small>
+              </span>
+            </div>
+          </div>
+          <div class="form-group has-feedback">
+            <div class="col-md-12" [ngClass]="{ 'has-error': passwordMessage, 'has-success': !passwordMessage && loginForm.get('password').dirty }">
+              <input type="password" class="form-control" formControlName="password" placeholder="Password"
+                (keyup.enter)="login()">
+              <span class="help-block" *ngIf="passwordMessage">
+                <small>
+                  {{passwordMessage}}
+                </small>
+              </span>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="row">
+        <div class="col-md-12" style="padding-left: 20px; padding-right: 20px; padding-top: 5px">
+          <button type="submit" (click)="login()" class="btn btn-success btn-block " [disabled]="loginForm.invalid">
+            Login
+          </button>
+        </div>
+      </div>
+      <br>
+      <br>
+    </div>
+  </div>
+</body>

@@ -9,8 +9,8 @@ const routes: Routes = [
         component: PageMainComponent,
         children: [
             {
-                path: 'issue',
-                loadChildren: 'app/issue/issue.module#IssueModule',
+                path: '',
+                loadChildren: 'app/post/post.module#PostModule',
             },
             {
                 path: '**',

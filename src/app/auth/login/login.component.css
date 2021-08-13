@@ -1,0 +1,51 @@
+.login-page{
+    background: #defffe 
+}
+
+.login-bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+      
+.canvas {
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+}
+
+.login-box-body{
+    padding-top: 35px !important;
+    padding-right: 40px !important;
+    padding-left: 40px !important;
+    padding-bottom: 10px !important;
+}
+
+.login-box-msg{
+    margin-bottom: 50px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.form-control{
+  border-radius: 20px;
+  text-align: center;
+}
+
+.form-group{
+  margin-bottom: 25px;
+}
+
+.btn-success{
+    background-color: #4a80ff;
+    border-color: #4a80ff;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.btn-success:hover{
+    background-color: #3672ff;
+    border-color: #3672ff;
+}
